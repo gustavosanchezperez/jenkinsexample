@@ -1,4 +1,4 @@
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 
 add_executable(testPro test.cpp ${CMAKE_SOURCE_DIR}/helloWorld.h ${CMAKE_SOURCE_DIR}/helloWorld.cpp)
 

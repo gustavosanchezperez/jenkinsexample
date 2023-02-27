@@ -1,17 +1,11 @@
-#include <QtWidgets>
-#include <QString>
+#include <iostream>
 #include "helloWorld.h"
 
-int main(int argc, char **argv ) {
-    QApplication app(argc, argv);
-    QWidget window;
-    window.resize(320, 240);
-    window.show();
+int main(int argc, char **argv) {
+  HelloWorld helloWorld;
+  std::string hello = helloWorld.helloWorld();
 
-    HelloWorld helloWorld;
-    std::string hello = helloWorld.helloWorld();
+  std::cout << hello << std::endl;
 
-    window.setWindowTitle(QApplication::translate("toplevel", hello.c_str()));
-
-    return app.exec();
+  return 0;
 }
