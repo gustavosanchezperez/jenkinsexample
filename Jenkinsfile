@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	options {
-		buildDiscarder(logRotator(numToKeepStr: '10'))
+		buildDiscarder(logRotator(numToKeepStr: '3'))
 	}
 
 	parameters {
@@ -14,7 +14,7 @@ pipeline {
 	stages {
         stage('Build') {
             steps {
-                cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
+                cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[]]
             }
         }
 
